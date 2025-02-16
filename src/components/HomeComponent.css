@@ -1,0 +1,79 @@
+/* Contenitore principale con background bianco e font system (stile Apple) */
+.home-container {
+    background: #ffffff;
+    min-height: 100vh;
+    padding: 2rem;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    color: #333;
+  }
+  
+  /* Header centrale con titoli */
+  .home-header {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .home-header h1 {
+    font-size: 2.5rem;
+    color: #103682; /* blu profondo */
+    margin-bottom: 0.5rem;
+  }
+  
+  .home-header p {
+    font-size: 1.2rem;
+    color: #666;
+  }
+  
+  /* Contenitore dei widget in grid responsive */
+  .widget-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  /* Stile dei widget in stile Apple: card con ombra e angoli arrotondati */
+  .widget {
+    background: #f9f9f9;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  /* Effetto hover per dare un senso di interattività */
+  .widget:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+  }
+  
+  .widget h2 {
+    font-size: 1.5rem;
+    color: #ef7f1b; /* colore accento arancione */
+    margin-bottom: 0.5rem;
+  }
+  
+  .widget p {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  .immagine{
+    width: 100%;
+    height: auto;
+  }
+
+  .bckHOME {
+    width: 100%;
+    height: 400px; /* Imposta l'altezza massima */
+    overflow: hidden; /* Nasconde la parte eccedente */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .immagine {
+    width: 100%;
+    height: auto; /* Mantiene le proporzioni */
+    object-fit: cover; /* Taglia l'immagine per riempire l'area senza deformarla */
+  }
+  
