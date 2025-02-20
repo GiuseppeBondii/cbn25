@@ -7,7 +7,7 @@ const importImages = (year) => {
   const images = [];
   try {
     // Modifica questi numeri in base al numero effettivo di immagini per ogni anno
-    const imageCount = 13; // Esempio: 6 immagini per anno
+    const imageCount = 13
     
     for(let i = 1; i <= imageCount; i++) {
       images.push({
@@ -45,7 +45,7 @@ const ImagesAlongYearsComponent = () => {
   return (
     <div className="home-container">
       <header className="home-header">
-        <h1>CBN Along years</h1>
+        <h1 className='title'>CBN Along years</h1>
         <p>08 - 09 - 10 Maggio 2025</p>
       </header>
 

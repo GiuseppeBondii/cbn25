@@ -1,41 +1,36 @@
 import React from 'react';
 import './HomeComponent.css';
 import immgProva from '../files/imm_prova.png';
-import joeruspante from '../files/joeRuspante.jpg';
+import imgBck from '../files/2023/16.jpg';
+import CountdownComponent from "./CountDownComponent";
 
 const HomeComponent = () => {
   return (
     <div className="home-container">
       <header className="home-header">
-        <h1>Campus By Night</h1>
+        <h1 className="title">This Year's Title</h1>
         <p>08 - 09 - 10 Maggio 2025</p>
       </header>
-      <div className='bckHOME'>
-        <img src={joeruspante} alt="Joe Ruspante" className='immagine' />
+      <div className="bckHOME">
+        <img src={imgBck} alt="Copertina" className="immagineHome" />
       </div>
-
+      {}
+        <CountdownComponent></CountdownComponent>
       <div className="widget-container">
         <div className="widget">
-          <h2>Dove</h2>
-          <p>
-            Loden ipsum dolor sit amet, consectetur adipiscing elit. Nullam
-            accumsan, justo a dapibus pulvinar, urna lectus congue nibh.
-          </p>
-        </div>
-        <div className="widget">
-          <h2>Sorella di manu</h2>
+          <h2>Widget Title</h2>
           <p>
             Loden ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vel
             neque euismod, ullamcorper velit ac, commodo turpis.
           </p>
         </div>
         <div className="widget">
-          <h2>Anna Cucc infame</h2>
+          <h2>Widget Title</h2>
           <p>
             Loden ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vel
             neque euismod, ullamcorper velit ac, commodo turpis.
           </p>
-          <img src={immgProva} alt="Prova immagine" className='immagine' />
+          <img src={immgProva} alt="Prova immagine" className="immagine" />
         </div>
       </div>
     </div>

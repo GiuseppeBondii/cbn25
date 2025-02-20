@@ -1,12 +1,30 @@
 import React, { useState } from 'react';
-import { AnimatePresence, motion } from 'framer-motion';
+import { useEffect } from 'react';
 import BottomBar from './components/BottomBar';
 import HomeComponent from './components/HomeComponent';
 import ProgInfoComponent from './components/ProgInfoComponent';
-import MapComponent from './components/MapComponent';
+import FoodComponent from './components/FoodComponent';
 import ImagesAlongYearsComponent from './components/ImagesAlongYearsComponent';
+import programData from './components/Programma.json';
+
+const preloadImage = (src) => {
+  const img = new Image();
+  img.src = src;
+};
 
 function App() {
+
+  useEffect(() => {
+    // Precarica tutte le immagini degli eventi definiti nel JSON
+    programData.days.forEach(day => {
+      day.events.forEach(event => {
+        if (event.image) {
+          preloadImage(event.image);
+        }
+      });
+    });
+  }, []);
+
   const [activeIndex, setActiveIndex] = useState(0);
 
   const renderComponent = () => {
@@ -16,7 +34,7 @@ function App() {
       case 1:
         return <ProgInfoComponent />;
       case 2:
-        return <MapComponent />;
+        return <FoodComponent />;
       case 3:
         return <ImagesAlongYearsComponent />;
       default:
@@ -26,7 +44,7 @@ function App() {
 
   return (
     <div className="appContainer" style={{ paddingBottom: '80px' }}>
-      <AnimatePresence mode="wait">
+      {/*<AnimatePresence mode="wait">
         <motion.div
           key={activeIndex}
           initial={{ opacity: 0, x: 50 }}
@@ -36,7 +54,8 @@ function App() {
         >
           {renderComponent()}
         </motion.div>
-      </AnimatePresence>
+      </AnimatePresence>*/}
+      {renderComponent()}
 
       <BottomBar activeIndex={activeIndex} setActiveIndex={setActiveIndex} />
     </div>

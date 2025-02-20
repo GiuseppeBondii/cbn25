@@ -1,0 +1,84 @@
+
+{
+    "days": [
+      {
+        "date": "09 Maggio",
+        "events": [
+          {
+            "title": "Stocazzo 1",
+            "description": "Loden ipsum dolor sit amet, consectetur adipiscing elit. Nullam accumsan, justo a dapibus pulvinar, urna lectus congue nibh.",
+            "image": "/images/5.jpg",
+            "time": "10:00",
+            "location": "Luogo 1"
+          },
+          {
+            "title": "Stocazzo 2",
+            "description": "Loden ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vel neque euismod, ullamcorper velit ac, commodo turpis.",
+            "image": "/images/6.jpg",
+            "time": "11:00",
+            "location": "Luogo 2"
+          },
+          {
+            "title": "Stocazzo 3",
+            "description": "Loden ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vel neque euismod, ullamcorper velit ac, commodo turpis.",
+            "image": "/images/7.jpg",
+            "time": "12:00",
+            "location": "Luogo 3"
+          }
+        ]
+      },
+      {
+        "date": "10 Maggio",
+        "events": [
+          {
+            "title": "Stocazzo 1",
+            "description": "Loden ipsum dolor sit amet, consectetur adipiscing elit. Nullam accumsan, justo a dapibus pulvinar, urna lectus congue nibh.",
+            "image": "/images/8.jpg",
+            "time": "10:00",
+            "location": "Luogo 1"
+          },
+          {
+            "title": "Stocazzo 2",
+            "description": "Loden ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vel neque euismod, ullamcorper velit ac, commodo turpis.",
+            "image": "/images/9.jpg",
+            "time": "11:00",
+            "location": "Luogo 2"
+          },
+          {
+            "title": "Stocazzo 3",
+            "description": "Loden ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vel neque euismod, ullamcorper velit ac, commodo turpis.",
+            "image": "/images/10.jpg",
+            "time": "12:00",
+            "location": "Luogo 3"
+          }
+        ]
+      },
+      {
+        "date": "11 Maggio",
+        "events": [
+          {
+            "title": "Stocazzo 1",
+            "description": "Loden ipsum dolor sit amet, consectetur adipiscing elit. Nullam accumsan, justo a dapibus pulvinar, urna lectus congue nibh.",
+            "image": "/images/11.jpg",
+            "time": "10:00",
+            "location": "Luogo 1"
+          },
+          {
+            "title": "Stocazzo 2",
+            "description": "Loden ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vel neque euismod, ullamcorper velit ac, commodo turpis.",
+            "image": "path/to/image2.jpg",
+            "time": "11:00",
+            "location": "Luogo 2"
+          },
+          {
+            "title": "Stocazzo 3",
+            "description": "Loden ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vel neque euismod, ullamcorper velit ac, commodo turpis.",
+            "image": "path/to/image3.jpg",
+            "time": "12:00",
+            "location": "Luogo 3"
+          }
+        ]
+      }
+    ]
+  }
+  
