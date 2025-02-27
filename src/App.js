@@ -6,6 +6,7 @@ import ProgInfoComponent from './components/ProgInfoComponent';
 import FoodComponent from './components/FoodComponent';
 import ImagesAlongYearsComponent from './components/ImagesAlongYearsComponent';
 import programData from './components/Programma.json';
+import Footer from './components/Footer';
 
 const preloadImage = (src) => {
   const img = new Image();
@@ -27,7 +28,7 @@ function App() {
 
   const [activeIndex, setActiveIndex] = useState(0);
 
-  const renderComponent = () => {
+  const renderComponent = () => { //TODO: swipe da una pagina all altra tramite scorrimento touch
     switch (activeIndex) {
       case 0:
         return <HomeComponent />;
@@ -43,6 +44,7 @@ function App() {
   };
 
   return (
+    <div>
     <div className="appContainer" style={{ paddingBottom: '80px' }}>
       {/*<AnimatePresence mode="wait">
         <motion.div
@@ -57,7 +59,10 @@ function App() {
       </AnimatePresence>*/}
       {renderComponent()}
 
-      <BottomBar activeIndex={activeIndex} setActiveIndex={setActiveIndex} />
+      {/*<BottomBar activeIndex={activeIndex} setActiveIndex={setActiveIndex} />*/}
+    
+    </div>
+    <Footer></Footer>
     </div>
   );
 }

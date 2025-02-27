@@ -8,7 +8,8 @@ const HomeComponent = () => {
   return (
     <div className="home-container">
       <header className="home-header">
-        <h1 className="title">This Year's Title</h1>
+        <h1 className="title">dove si accende la vita?</h1>
+        <h2>CAMPUS BY NIGHT</h2>
         <p>08 - 09 - 10 Maggio 2025</p>
       </header>
       <div className="bckHOME">
@@ -18,20 +19,11 @@ const HomeComponent = () => {
         <CountdownComponent></CountdownComponent>
       <div className="widget-container">
         <div className="widget">
-          <h2>Widget Title</h2>
+          <h2>Che cos'E' il Campus By Night?</h2>
           <p>
-            Loden ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vel
-            neque euismod, ullamcorper velit ac, commodo turpis.
-          </p>
+          Il Campus By Night (CBN) è un evento organizzato dagli studenti dell’associazione studentesca Student Office dell’Alma Mater Studiorum Università di Bologna, in collaborazione con The Crew. Tramite mostre e incontri, lo scopo dell’evento è di portare a tutti gli universitari e ai cittadini di Bologna ciò che ci appassiona e ci affascina della vita e dello studio. Giunto alla sua XXII edizione, quest’anno il CBN avrà come titolo 'Dove si accende la Withə' e si svolgerà dal 8 al 10 maggio presso Piazza San Domenico.          </p>
         </div>
-        <div className="widget">
-          <h2>Widget Title</h2>
-          <p>
-            Loden ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vel
-            neque euismod, ullamcorper velit ac, commodo turpis.
-          </p>
-          <img src={immgProva} alt="Prova immagine" className="immagine" />
-        </div>
+        
       </div>
     </div>
   );

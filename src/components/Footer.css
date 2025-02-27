@@ -1,0 +1,101 @@
+/* Mantenendo le variabili definite nel Brand Manual */
+:root {
+    --cbn-blue: #103682; /* Blu profondo */
+    --cbn-orange: #ef7f1b; /* Accento arancione */
+    --cbn-grey: #ededed; /* Grigio chiaro */
+    --font-title: 'Craketest Medium', sans-serif;
+    --font-body: 'Clash Grotesk', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  }
+  
+  /* Stile principale del footer coerente con il Brand Manual */
+  .footer-container {
+    background-color: #ffffff;
+    color: #333;
+    padding: 2rem 0;
+    width: 100%;
+    margin-top: 2rem;
+    font-family: var(--font-body);
+    border-top: 3px solid var(--cbn-orange);
+    box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.05);
+  }
+  
+  .footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    text-align: center;
+  }
+  
+  .footer-text {
+    margin-bottom: 1.5rem;
+  }
+  
+  .footer-text p {
+    margin: 0.5rem 0;
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+  
+  .footer-text p:first-child {
+    color: var(--cbn-blue);
+    font-family: var(--font-title);
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    margin-bottom: 0.8rem;
+  }
+  
+  .footer-logo-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 1rem;
+  }
+  
+  .footer-logo-container a {
+    display: inline-block;
+    transition: transform 0.3s;
+  }
+  
+  .footer-logo-container a:hover {
+    transform: translateY(-5px);
+  }
+  
+  .footer-logo {
+    max-width: 90px;
+    height: auto;
+    border-radius: 8px;
+    object-fit: contain;
+  }
+  
+  /* Stile dei link */
+  .footer-container a {
+    color: var(--cbn-blue);
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .footer-container a:hover {
+    color: var(--cbn-orange);
+  }
+  
+  /* Responsive design - mantenere coerenza con il resto del sito */
+  @media (max-width: 768px) {
+    .footer-logo-container {
+      gap: 1.5rem;
+    }
+    
+    .footer-logo {
+      max-width: 80px;
+    }
+  }
+  
+  /* Importazione del font Craketest (per mantenere coerenza) */
+  @font-face {
+    font-family: 'Craketest Medium';
+    src: url('../files/CBN25/crake-font-family/craketest-medium.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
