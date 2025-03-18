@@ -10,18 +10,18 @@
   --font-body: 'Clash Grotesk', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
 
+
 /* Contenitore principale con background bianco e tipografia brandizzata */
 .home-container {
-  background-color: var(cbn-orange);
-  background: #ffffff;
   min-height: 100vh;
   padding: 2rem;
   font-family: var(--font-body);
   color: #333;
+  border-radius: 28px;
 }
 
 /* Header centrale con titoli */
-.home-header {
+.home-header{
   text-align: center;
   margin-bottom: 2rem;
 }
@@ -32,6 +32,9 @@
   margin-bottom: 0.5rem;
   text-transform: uppercase; /* In linea con il tono del brand */
   font-family: var(--font-title);
+}
+.home-header h2 {
+  color: var(--cbn-blue);
 }
 
 .home-header p {
@@ -48,7 +51,7 @@
 
 /* Stile dei widget in "card" con ombra e angoli arrotondati */
 .widget {
-  background: #f9f9f9;
+  background: var(--cbn-orange);
   border-radius: 12px;
   padding: 1.5rem;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -62,13 +65,14 @@
 
 .widget h2 {
   font-size: 1.5rem;
-  color: var(--cbn-orange);
+  color: #ededed;
   margin-bottom: 0.5rem;
   text-transform: uppercase; /* Titoli in caps come indicato nel Brand Manual */
   font-family: var(--font-title);
 }
 
 .widget p {
+  color: #ededed;
   font-size: 1rem;
   line-height: 1.5;
 }

@@ -14,21 +14,17 @@ const Footer = () => {
           <p>Bologna</p>
         </div>
         
-        <div className="footer-logo-container">
-
-            <a href='www.facebook.com/CampusByNight' target='_blank'>
-          <img src={facebookLogo} alt="Facebook" className="footer-logo" />
+        <div className="footer-logo-container"> 
+          <a href="https://www.facebook.com/CampusByNight" target="_blank" rel="noopener noreferrer">
+              <img src={facebookLogo} alt="Facebook" className="footer-logo" />
           </a>
-            <a href='www.instagram.com/_campusbynight_' target='_blank'>
-          <img src={instagramLogo} alt="Instagram" className="footer-logo" />
+          <a href="https://www.instagram.com/_campusbynight_" target="_blank" rel="noopener noreferrer">
+              <img src={instagramLogo} alt="Instagram" className="footer-logo" />
           </a>
-          <a href='www.youtube.com/c/CampusByNight' target='_blank'>
-          <img src={ilTubo} alt="Youtube" className="footer-logo" />
+          <a href="https://www.youtube.com/c/CampusByNight" target="_blank" rel="noopener noreferrer">
+              <img src={ilTubo} alt="Youtube" className="footer-logo" />
           </a>
-
-        
-
-        </div>
+      </div>
         <br></br>
         <br></br>
 

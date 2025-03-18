@@ -1,42 +1,53 @@
-import React, { useState } from 'react';
-import { useEffect } from 'react';
+import React, { useState, useRef } from 'react';
 import BottomBar from './components/BottomBar';
 import HomeComponent from './components/HomeComponent';
 import ProgInfoComponent from './components/ProgInfoComponent';
 import FoodComponent from './components/FoodComponent';
 import ImagesAlongYearsComponent from './components/ImagesAlongYearsComponent';
-import programData from './components/Programma.json';
 import Footer from './components/Footer';
+import "./components/swipe.css";
 
-const preloadImage = (src) => {
-  const img = new Image();
-  img.src = src;
-};
-
+// Il codice di preloading è stato rimosso in favore del caricamento progressivo con blur
 function App() {
-
-  useEffect(() => {
-    // Precarica tutte le immagini degli eventi definiti nel JSON
-    programData.days.forEach(day => {
-      day.events.forEach(event => {
-        if (event.image) {
-          preloadImage(event.image);
-        }
-      });
-    });
-  }, []);
-
   const [activeIndex, setActiveIndex] = useState(0);
+  const touchStartX = useRef(null);
+  const touchEndX = useRef(null);
+  const MIN_SWIPE_DISTANCE = 50; // Distanza minima per riconoscere lo swipe
 
-  const renderComponent = () => { //TODO: swipe da una pagina all altra tramite scorrimento touch
+  const handleTouchStart = (e) => {
+    touchStartX.current = e.touches[0].clientX;
+  };
+
+  const handleTouchMove = (e) => {
+    touchEndX.current = e.touches[0].clientX;
+  };
+
+  const handleTouchEnd = () => {
+    if (!touchStartX.current || !touchEndX.current) return;
+
+    const distance = touchStartX.current - touchEndX.current;
+    const isLeftSwipe = distance > MIN_SWIPE_DISTANCE;
+    const isRightSwipe = distance < -MIN_SWIPE_DISTANCE;
+
+    if (isLeftSwipe && activeIndex < 3) {
+      setActiveIndex(prevIndex => prevIndex + 1);
+    } else if (isRightSwipe && activeIndex > 0) {
+      setActiveIndex(prevIndex => prevIndex - 1);
+    }
+
+    touchStartX.current = null;
+    touchEndX.current = null;
+  };
+
+  const renderComponent = () => {
     switch (activeIndex) {
       case 0:
         return <HomeComponent />;
-      case 1:
+      /*case 1:
         return <ProgInfoComponent />;
       case 2:
-        return <FoodComponent />;
-      case 3:
+        return <FoodComponent />;*/
+      case 1:
         return <ImagesAlongYearsComponent />;
       default:
         return <HomeComponent />;
@@ -45,24 +56,19 @@ function App() {
 
   return (
     <div>
-    <div className="appContainer" style={{ paddingBottom: '80px' }}>
-      {/*<AnimatePresence mode="wait">
-        <motion.div
-          key={activeIndex}
-          initial={{ opacity: 0, x: 50 }}
-          animate={{ opacity: 1, x: 0 }}
-          exit={{ opacity: 0, x: -50 }}
-          transition={{ duration: 0.3 }}
-        >
+      <div 
+        className="appContainer" 
+        onTouchStart={handleTouchStart}
+        onTouchMove={handleTouchMove}
+        onTouchEnd={handleTouchEnd}
+      >
+        <div className="swipePage">
           {renderComponent()}
-        </motion.div>
-      </AnimatePresence>*/}
-      {renderComponent()}
+        </div>
 
-      {/*<BottomBar activeIndex={activeIndex} setActiveIndex={setActiveIndex} />*/}
-    
-    </div>
-    <Footer></Footer>
+        <BottomBar activeIndex={activeIndex} setActiveIndex={setActiveIndex} />
+      </div>
+      <Footer />
     </div>
   );
 }

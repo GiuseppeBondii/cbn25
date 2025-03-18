@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import programData from './Programma.json';
 import './ProgInfoComponent.css';
+import ProgressiveImage from './ProgressiveImage';
 
 const Modal = ({ event, onClose }) => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -124,7 +125,11 @@ END:VCALENDAR`
         <h2>{event.title}</h2>
         <p>{event.description}</p>
         {event.image && (
-          <img src={event.image} alt={event.title} className="immagine modal-image" />
+          <ProgressiveImage 
+            src={event.image} 
+            alt={event.title} 
+            className="immagine modal-image" 
+          />
         )}
         <p>
           <strong>Data:</strong> {event.date}
