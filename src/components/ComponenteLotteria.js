@@ -7,15 +7,16 @@ const Lotteria = () => {
       <header className="home-header">
         <h1 className='title'>Lotteria</h1>
       </header>
-      {/*<div className='widget'>
+      <div className='widget'>
+        <h2>
+        Estrazione
+        </h2>
         <p>
-        babel-preset-react-app is part of the create-react-app project, which
-        is not maintianed anymore. It is thus unlikely that this bug will
-        ever be fixed. Add "@babel/plugin-proposal-private-property-in-object" to
-        your devDependencies to work around this error. This will make this message
-        go away.
+        dei biglietti vincenti <br></br>
+        10 Maggio 2025, ore 20:00<br></br> 
+        Piazza S.Domenico, Bologna
         </p>
-      </div>*/}
+      </div>
       <div className="widget-container">
         {premi.map((premio) => (
           <div className="widge-whitet" key={premio.premio}>
