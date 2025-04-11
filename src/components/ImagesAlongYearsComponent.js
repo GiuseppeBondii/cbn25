@@ -73,14 +73,14 @@ const ImagesAlongYearsComponent = () => {
         <div className="widget">
           <h2>Storia</h2>
           <p>
-          L’Associazione ONLUS The Crew, in collaborazione con la lista e associzione studentesca Student Office, organizza il "Campus By Night", arrivato alla sua XXII edizione, quale significativo evento culturale con cadenza annuale rivolto agli studenti dell’Alma Mater Studiorum-Università di Bologna e alla città intera. <br/>
+          L’Associazione ONLUS The Crew, in collaborazione con la lista e associazione studentesca Student Office, organizza il "Campus By Night", arrivato alla sua XXII edizione, quale significativo evento culturale con cadenza annuale rivolto agli studenti dell’Alma Mater Studiorum-Università di Bologna e alla città intera. <br/>
           Il "Campus by Night" nasce dal desiderio di poter incontrare tutta la comunità Accademica, diventando una grande occasione di incontro, confronto e dibattito, tramite mostre, spettacoli, conferenze e tornei sportivi.<br/>
           Il "Campus by Night" partendo dall'ascolto delle sfide contemporanee che il mondo pone, ogni anno propone un tema centrale, rappresentato dal titolo, con cui invita l'università e la città a confrontarsi. <br/>
           Nelle ultime edizioni sono stati scelti i seguenti titoli:<br/>
           "Cosa rende la vita vita?"<br/>
           "Sei felice in questo mondo?"<br/>
           "Un'amicizia per vivere, vivere per un'amicizia"<br/>
-          "In che cosa poso sperare?"<br/>
+          "In che cosa posso sperare?"<br/>
           Nelle scorse edizioni del "Campus By Night" sono intervenuti personaggi appartenenti al mondo dello spettacolo, della musica, dello sport, dell'università ed esponenti politici tra cui: Mario Mauro (ex ministro e politico italiano), Morgan (musicista e cantautore italiano), Paolo Cevoli (comico), Leonardo (ex calciatore e allenatore), Gherardo Colombo (ex magistrato), Agnese Moro (giornalista), Giorgio De Rita (Segretario Generale Censis) e tanti docenti dell'Alma Mater.<br/>
           </p>
         </div>
