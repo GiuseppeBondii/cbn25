@@ -1,6 +1,7 @@
 import React from 'react';
 import { FiHome, FiCalendar, FiFolder } from 'react-icons/fi';
 import { IoFastFoodOutline } from "react-icons/io5";
+import { TbListNumbers } from "react-icons/tb";
 
 
 import './bottombar.css';
@@ -10,6 +11,7 @@ const BottomBar = ({ activeIndex, setActiveIndex }) => {
     { icon: <FiHome size={24} /> },/*
     { icon: <FiCalendar size={24} /> },
     {  icon: <IoFastFoodOutline size={24} /> },*/
+    { icon: <TbListNumbers size={24} />},
     {  icon: <FiFolder size={24} /> }
   ];
 

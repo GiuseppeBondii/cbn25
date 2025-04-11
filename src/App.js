@@ -6,6 +6,7 @@ import FoodComponent from './components/FoodComponent';
 import ImagesAlongYearsComponent from './components/ImagesAlongYearsComponent';
 import Footer from './components/Footer';
 import "./components/swipe.css";
+import Lotteria from './components/ComponenteLotteria';
 
 // Il codice di preloading è stato rimosso in favore del caricamento progressivo con blur
 function App() {
@@ -47,7 +48,9 @@ function App() {
         return <ProgInfoComponent />;
       case 2:
         return <FoodComponent />;*/
-      case 1:
+        case 1:
+      return <Lotteria />;
+      case 2:
         return <ImagesAlongYearsComponent />;
       default:
         return <HomeComponent />;
