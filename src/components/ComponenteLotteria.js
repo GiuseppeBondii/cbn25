@@ -19,7 +19,7 @@ const Lotteria = () => {
       </div>
       <div className="widget-container">
         {premi.map((premio) => (
-          <div className="widge-whitet" key={premio.premio}>
+          <div key={premio.premio}>
             <h2>{premio.premio}° premio</h2>
             <p>{premio.descrizione}</p>
           </div>

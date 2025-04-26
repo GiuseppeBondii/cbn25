@@ -124,13 +124,13 @@ END:VCALENDAR`
         <button className="close-button" onClick={onClose}>X</button>
         <h2>{event.title}</h2>
         <p>{event.description}</p>
-        {event.image && (
+        {/*event.image && (
           <ProgressiveImage 
             src={event.image} 
             alt={event.title} 
             className="immagine modal-image" 
           />
-        )}
+        )*/}
         <p>
           <strong>Data:</strong> {event.date}
         </p>
@@ -184,6 +184,39 @@ const ProgInfoComponent = () => {
 
   return (
     <div className="home-container">
+
+
+<header className="home-header">
+        <h1 className="title">Mostre</h1>
+      </header>
+
+      <div className="widget-container">
+        <div className=''>
+          <h2>
+          "UOMOVIVO: la coscienza di esser vivi"
+          </h2>
+          <p>
+          Mostra su Gilbert Keith Chesterton.
+          </p>
+        </div>
+        <div className=''>
+          <h2>
+          "Farsi ferita"
+          </h2>
+          <p>
+          Mostra sull'attualità attraverso lo sguardo di Giovanni Testori.
+          </p>
+        </div>
+        <div className=''>
+          <h2>
+          "Università: qui si accende la vita"
+          </h2>
+          <p>
+          Mostra sulla vita in Università.
+          </p>
+        </div>
+      </div>
+
       <header className="home-header">
         <h1 className="title">Programma</h1>
       </header>
@@ -207,6 +240,12 @@ const ProgInfoComponent = () => {
       ))}
 
       {selectedEvent && <Modal event={selectedEvent} onClose={closeModal} />}
+      <br/>
+      <br/>
+      <br/>
+
+
+      
     </div>
   );
 };

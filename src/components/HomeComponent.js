@@ -1,7 +1,7 @@
 import React from 'react';
 import './HomeComponent.css';
 import CountdownComponent from "./CountDownComponent";
-import imgBck from '../files/sfondoHS.jpg';
+import imgBck from '../files/CBN_Cover.jpg';
 import data from "./HomeComponent.json"
 
 const HomeComponent = () => {

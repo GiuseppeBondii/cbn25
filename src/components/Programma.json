@@ -2,28 +2,42 @@
 {
     "days": [
       {
-        "date": "09 Maggio",
+        "date": "8 Maggio",
         "events": [
           {
-            "title": "Stocazzo 1",
-            "description": "Loden ipsum dolor sit amet, consectetur adipiscing elit. Nullam accumsan, justo a dapibus pulvinar, urna lectus congue nibh.",
-            "image": "/images/5.jpg",
-            "time": "10:00",
-            "location": "Luogo 1"
+            "title": "Inaugurazione",
+            "description": "Inaugurazione della XXII edizione del Campus By Night  ",
+            "time": "18:00",
+            "location": "Piazza San Domenico"
           },
           {
-            "title": "Stocazzo 2",
-            "description": "Loden ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vel neque euismod, ullamcorper velit ac, commodo turpis.",
-            "image": "/images/6.jpg",
-            "time": "11:00",
-            "location": "Luogo 2"
+            "title": "Da una passione, una scommessa per la vita",
+            "description": "incontro sulle sfide dell'esperienza lavorativa con Carlo Carabelli, Direttore Generale di ASLAM, e Giacomo Perletti, imprenditore agricolo e fondatore di Contrada Bricconi.",
+            "time": "18:45",
+            "location": "Piazza San Domenico"
           },
           {
-            "title": "Stocazzo 3",
-            "description": "Loden ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vel neque euismod, ullamcorper velit ac, commodo turpis.",
-            "image": "/images/7.jpg",
-            "time": "12:00",
-            "location": "Luogo 3"
+            "title": "M'innamoravo di tutto",
+            "description": "Serata musicale sulle tracce di Fabrizio De André.",
+            "time": "21:00",
+            "location": "Piazza San Domenico"
+          }
+        ]
+      },
+      {
+        "date": "9 Maggio",
+        "events": [
+          {
+            "title": "Intelligenza artificiale: strumento o limite per l'uomo?",
+            "description": "con Paolo Benanti, professore alla Pontificia Università Gregoriana e presso l'Università di Seattle, consigliere del Vaticano, membro del Comitato sull'intelligenza artificiale delle Nazioni Unite, e Fabio Mercorio, professore all'Università degli studi di Milano - Bicocca, director del master in Al e Data Analytics.",
+            "time": "18:00",
+            "location": "Piazza San Domenico"
+          },
+          {
+            "title": "Dove si accende la vita?",
+            "description": "dialogo sulla sofferenza psicologica con Lorenzo Bassani, neuropsichiatra e responsabile della struttura semplice di psichiatria e psicoterapia dell'età evolutiva dell'Ospedale F. Tappeiner di Merano, e Gianluca Guida, direttore dell'Istituto Penale per Minorenni di Nisida (Napoli), Centro Europeo di Studi sulla devianza ed il disagio giovanile.",
+            "time": "21:00",
+            "location": "Piazza San Domenico"
           }
         ]
       },
@@ -31,51 +45,22 @@
         "date": "10 Maggio",
         "events": [
           {
-            "title": "Stocazzo 1",
-            "description": "Loden ipsum dolor sit amet, consectetur adipiscing elit. Nullam accumsan, justo a dapibus pulvinar, urna lectus congue nibh.",
-            "image": "/images/8.jpg",
-            "time": "10:00",
-            "location": "Luogo 1"
+            "title": "Politica per la vita, vita per la politica",
+            "description": "con Gabriele Toccafondi, dirigente di cooperativa, politico italiano, deputato alla Camera nella XVI legislatura.",
+            "time": "18:30",
+            "location": "Piazza San Domenico"
           },
           {
-            "title": "Stocazzo 2",
-            "description": "Loden ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vel neque euismod, ullamcorper velit ac, commodo turpis.",
-            "image": "/images/9.jpg",
-            "time": "11:00",
-            "location": "Luogo 2"
+            "title": "Estrazione biglietti della lotteria",
+            "description": "i biglietti sono acquistabili in loco durante i giorni dell'evento",
+            "time": "20:00",
+            "location": "Piazza San Domenico"
           },
           {
-            "title": "Stocazzo 3",
-            "description": "Loden ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vel neque euismod, ullamcorper velit ac, commodo turpis.",
-            "image": "/images/10.jpg",
+            "title": "Serata finale",
+            "description": "Con musica dal vivo",
             "time": "12:00",
-            "location": "Luogo 3"
-          }
-        ]
-      },
-      {
-        "date": "11 Maggio",
-        "events": [
-          {
-            "title": "Stocazzo 1",
-            "description": "Loden ipsum dolor sit amet, consectetur adipiscing elit. Nullam accumsan, justo a dapibus pulvinar, urna lectus congue nibh.",
-            "image": "/images/11.jpg",
-            "time": "10:00",
-            "location": "Luogo 1"
-          },
-          {
-            "title": "Stocazzo 2",
-            "description": "Loden ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vel neque euismod, ullamcorper velit ac, commodo turpis.",
-            "image": "path/to/image2.jpg",
-            "time": "11:00",
-            "location": "Luogo 2"
-          },
-          {
-            "title": "Stocazzo 3",
-            "description": "Loden ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vel neque euismod, ullamcorper velit ac, commodo turpis.",
-            "image": "path/to/image3.jpg",
-            "time": "12:00",
-            "location": "Luogo 3"
+            "location": "Piazza San Domenico"
           }
         ]
       }

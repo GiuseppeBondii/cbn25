@@ -2,7 +2,7 @@ import React, { useState, useRef } from 'react';
 import BottomBar from './components/BottomBar';
 import HomeComponent from './components/HomeComponent';
 import ProgInfoComponent from './components/ProgInfoComponent';
-import FoodComponent from './components/FoodComponent';
+//import FoodComponent from './components/FoodComponent';
 import ImagesAlongYearsComponent from './components/ImagesAlongYearsComponent';
 import Footer from './components/Footer';
 import "./components/swipe.css";
@@ -44,13 +44,13 @@ function App() {
     switch (activeIndex) {
       case 0:
         return <HomeComponent />;
-      /*case 1:
+      case 1:
         return <ProgInfoComponent />;
-      case 2:
+      /*case 2:
         return <FoodComponent />;*/
-        case 1:
+        case 2:
       return <Lotteria />;
-      case 2:
+      case 3:
         return <ImagesAlongYearsComponent />;
       default:
         return <HomeComponent />;
