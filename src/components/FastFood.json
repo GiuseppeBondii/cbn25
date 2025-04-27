@@ -1,0 +1,224 @@
+{
+  "categories": [
+    {
+      "name": "Piadine",
+      "items": [
+        {
+          "id": "piadina-la-soda",
+          "name": "La Soda",
+          "description": "Crudo, Rucola, Stracchino",
+          "price": 4.0
+        },
+        {
+          "id": "piadina-la-sally",
+          "name": "La Sally",
+          "description": "Salsiccia, Peperoni e cipolle caramellate, Stracchino",
+          "price": 4.0
+        },
+        {
+          "id": "piadina-la-magis",
+          "name": "La Magis",
+          "description": "Pomodoro, Mozzarella, Iceberg, Maionese",
+          "price": 4.0
+        }
+      ]
+    },
+    {
+      "name": "Panini",
+      "items": [
+        {
+          "id": "panino-quello-giusto",
+          "name": "Quello Giusto",
+          "description": "Patty di carne, Cheddar, Bacon, Salsa CBibbiN, Iceberg",
+          "price": 4.5
+        },
+        {
+          "id": "panino-lo-huge",
+          "name": "Lo Huge",
+          "description": "Zucchine grigliate, Melanzane grigliate, Cipolle caramellate, Scamorza",
+          "price": 4.5
+        },
+        {
+          "id": "extra-patate-panino",
+          "name": "Aggiunta patate al panino",
+          "description": null,
+          "price": 1.5
+        }
+      ]
+    },
+    {
+      "name": "Panini Special",
+      "items": [
+        {
+          "id": "panino-el-pepo",
+          "name": "El Pepo",
+          "description": "Patty di carne, Salsa Chili, Cheddar",
+          "price": 4.5,
+          "available_on": "10 Maggio"
+        },
+        {
+          "id": "panino-el-criminal",
+          "name": "El Criminal",
+          "description": "Costine, Valeriana, Finocchio, Salsa Ross",
+          "price": 4.5,
+          "available_on": "11 Maggio"
+        }
+      ]
+    },
+    {
+      "name": "Contorni",
+      "items": [
+        {
+          "id": "contorno-nuggets",
+          "name": "6 Nuggets di pollo",
+          "description": null,
+          "price": 3.5
+        },
+        {
+          "id": "contorno-patate",
+          "name": "Patate",
+          "description": null,
+          "price": 3.5
+        }
+      ]
+    },
+    {
+      "name": "Bevande",
+      "items": [
+        {
+          "id": "bevanda-coca-cola-spina",
+          "name": "Coca Cola alla spina",
+          "description": null,
+          "price": 2.5
+        },
+        {
+          "id": "bevanda-acqua-naturale",
+          "name": "Acqua naturale",
+          "description": null,
+          "price": 1.0
+        },
+        {
+          "id": "bevanda-acqua-frizzante",
+          "name": "Acqua frizzante",
+          "description": null,
+          "price": 1.0
+        },
+        {
+          "id": "bevanda-fanta",
+          "name": "Fanta",
+          "description": null,
+          "price": 2.0
+        },
+        {
+          "id": "bevanda-coca-zero",
+          "name": "Coca Zero",
+          "description": null,
+          "price": 2.0
+        }
+      ]
+    },
+    {
+      "name": "Birra",
+      "items": [
+        {
+          "id": "birra-ichnusa",
+          "name": "Ichnusa non filtrata",
+          "description": null,
+          "price": 3.5
+        },
+        {
+          "id": "birra-ducato-machete",
+          "name": "Ducato Machete (IPA)",
+          "description": null,
+          "price": 4.0
+        },
+        {
+          "id": "birra-erdinger-helles",
+          "name": "Erdinger Brauhaus Helles (Lager)",
+          "description": null,
+          "price": 3.5
+        }
+      ]
+    },
+    {
+      "name": "Vino",
+      "items": [
+        {
+          "id": "vino-lambrusco-calice",
+          "name": "Lambrusco (Paltrinieri) – Calice",
+          "description": null,
+          "price": 3.0
+        },
+        {
+          "id": "vino-lambrusco-bottiglia",
+          "name": "Lambrusco (Paltrinieri) – Bottiglia",
+          "description": null,
+          "price": 12.0
+        },
+        {
+          "id": "vino-morellino-calice",
+          "name": "Morellino di Scansano DOC – Calice",
+          "description": null,
+          "price": 3.0
+        },
+        {
+          "id": "vino-morellino-bottiglia",
+          "name": "Morellino di Scansano DOC – Bottiglia",
+          "description": null,
+          "price": 16.0
+        },
+        {
+          "id": "vino-vermentino-calice",
+          "name": "Vermentino – Calice",
+          "description": null,
+          "price": 3.0
+        },
+        {
+          "id": "vino-vermentino-bottiglia",
+          "name": "Vermentino – Bottiglia",
+          "description": null,
+          "price": 16.0
+        }
+      ]
+    },
+    {
+      "name": "Special Beverage",
+      "items": [
+        {
+          "id": "bevanda-spritz",
+          "name": "Spritz",
+          "description": null,
+          "price": 3.5
+        },
+        {
+          "id": "bevanda-gin-tonic",
+          "name": "Gin Tonic (solo sabato sera)",
+          "description": null,
+          "price": 5.0
+        }
+      ]
+    },
+    {
+      "name": "Box Aperitivo",
+      "items": [
+        {
+          "id": "box-aperitivo",
+          "name": "Box Aperitivo",
+          "description": "Taralli, Salame, Patate al forno, Nuggets (x 2 persone)",
+          "price": 6.0
+        }
+      ]
+    },
+    {
+      "name": "Dolce",
+      "items": [
+        {
+          "id": "dolce-cannolo-siculo",
+          "name": "Cannolo Siculo del Bar Alcamo con ricotta e canditi",
+          "description": null,
+          "price": 3.0
+        }
+      ]
+    }
+  ]
+}

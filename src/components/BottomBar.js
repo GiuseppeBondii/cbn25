@@ -9,8 +9,8 @@ import './bottombar.css';
 const BottomBar = ({ activeIndex, setActiveIndex }) => {
   const items = [
     { icon: <FiHome size={24} /> },
-    { icon: <FiCalendar size={24} /> },/*
-    {  icon: <IoFastFoodOutline size={24} /> },*/
+    { icon: <FiCalendar size={24} /> },
+    {  icon: <IoFastFoodOutline size={24} /> },
     { icon: <TbListNumbers size={24} />},
     {  icon: <FiFolder size={24} /> }
   ];

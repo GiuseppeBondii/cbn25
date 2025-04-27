@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import programData from './Programma.json';
 import './ProgInfoComponent.css';
-import ProgressiveImage from './ProgressiveImage';
+//import ProgressiveImage from './ProgressiveImage';
 
 const Modal = ({ event, onClose }) => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -96,9 +96,8 @@ END:VCALENDAR`
   // Funzione per condividere l'evento tramite la Web Share API (o fallback copiando il testo)
   const shareEvent = () => {
     const shareData = {
-      title: event.title,
-      text: `${event.description}\nData: ${event.date}\nOra: ${event.time}\nLuogo: ${event.location}`,
-      url: window.location.href // oppure un URL specifico all'evento se disponibile
+      title: event.title, text: `*${event.title}+ \n ${event.description}\nData: ${event.date}\nOra: ${event.time}\nLuogo: ${event.location}`,
+      url: window.location.href //Link al sito
     };
 
     if (navigator.share) {
@@ -209,7 +208,7 @@ const ProgInfoComponent = () => {
         </div>
         <div className=''>
           <h2>
-          "Università: qui si accende la vita"
+          "Universita': qui si accende la vita"
           </h2>
           <p>
           Mostra sulla vita in Università.
@@ -240,8 +239,7 @@ const ProgInfoComponent = () => {
       ))}
 
       {selectedEvent && <Modal event={selectedEvent} onClose={closeModal} />}
-      <br/>
-      <br/>
+    
       <br/>
 
 

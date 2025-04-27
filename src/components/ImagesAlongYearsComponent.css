@@ -75,8 +75,8 @@
 
 .close-btn {
   position: absolute;
-  top: -40px;
-  right: 2;
+  top: -10px;
+  right: -80px;
   background: none;
   border: none;
   color: white;
@@ -138,6 +138,14 @@
 .download-btn:hover {
   background: rgba(0, 0, 0, 0.7);
   transform: scale(1.1);
+}
+
+@media (max-width: 950px) {
+  .close-btn {
+    top: 10px;
+    right: 10px;
+  }
+
 }
 
 /* Media Queries per una maggiore responsività */

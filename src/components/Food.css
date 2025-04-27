@@ -1,0 +1,84 @@
+/* src/styles/Food.css */
+
+
+/* Menu item e wishlist item */
+.menu-item,
+.wishlist-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+/* Dettagli voce */
+.item-name {
+  display: block;
+  font-weight: 600;
+}
+.item-desc {
+  margin: 0.25rem 0;
+  font-size: 0.9rem;
+  color: #555;
+}
+.item-available {
+  font-size: 0.8rem;
+  color: #007bff;
+}
+
+/* Controllo quantità */
+.quantity-control {
+  display: flex;
+  align-items: center;
+}
+.quantity-control button {
+  background: transparent;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 0 0.5rem;
+}
+.quantity-control button:disabled {
+  opacity: 0.3;
+  cursor: default;
+}
+.quantity-control span {
+  font-weight: bold;
+  min-width: 1.5rem;
+  text-align: center;
+}
+
+/* Sezione wishlist */
+.wishlist-section {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  padding: 1rem;
+  margin-bottom: 2rem;
+}
+.wishlist-section h2 {
+  margin-bottom: 1rem;
+}
+
+/* Azioni wishlist */
+.wishlist-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+.wishlist-actions button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 8px;
+  font-family: var(--font-body);
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.wishlist-actions button:first-child {
+  background: var(--cbn-blue);
+  color: #fff;
+}
+.wishlist-actions button:last-child {
+  background: #ddd;
+  color: #333;
+}
+

@@ -1,20 +1,23 @@
-import React, { useState, useRef } from 'react';
+import React, { useState /*, useRef*/ } from 'react';
 import BottomBar from './components/BottomBar';
 import HomeComponent from './components/HomeComponent';
 import ProgInfoComponent from './components/ProgInfoComponent';
-//import FoodComponent from './components/FoodComponent';
+import FoodComponent from './components/FoodComponent';
 import ImagesAlongYearsComponent from './components/ImagesAlongYearsComponent';
 import Footer from './components/Footer';
 import "./components/swipe.css";
 import Lotteria from './components/ComponenteLotteria';
 
+
 // Il codice di preloading è stato rimosso in favore del caricamento progressivo con blur
 function App() {
   const [activeIndex, setActiveIndex] = useState(0);
-  const touchStartX = useRef(null);
-  const touchEndX = useRef(null);
-  const MIN_SWIPE_DISTANCE = 50; // Distanza minima per riconoscere lo swipe
 
+  //const touchStartX = useRef(null);
+  //const touchEndX = useRef(null);
+  //const MIN_SWIPE_DISTANCE = 50; // Distanza minima per riconoscere lo swipe
+
+  /*
   const handleTouchStart = (e) => {
     touchStartX.current = e.touches[0].clientX;
   };
@@ -38,7 +41,7 @@ function App() {
 
     touchStartX.current = null;
     touchEndX.current = null;
-  };
+  };*/
 
   const renderComponent = () => {
     switch (activeIndex) {
@@ -46,11 +49,11 @@ function App() {
         return <HomeComponent />;
       case 1:
         return <ProgInfoComponent />;
-      /*case 2:
-        return <FoodComponent />;*/
-        case 2:
+      case 2:
+        return <FoodComponent />;
+        case 3:
       return <Lotteria />;
-      case 3:
+      case 4:
         return <ImagesAlongYearsComponent />;
       default:
         return <HomeComponent />;
@@ -61,9 +64,9 @@ function App() {
     <div>
       <div 
         className="appContainer" 
-        onTouchStart={handleTouchStart}
-        onTouchMove={handleTouchMove}
-        onTouchEnd={handleTouchEnd}
+        //onTouchStart={handleTouchStart}
+        //onTouchMove={handleTouchMove}
+        //onTouchEnd={handleTouchEnd}
       >
         <div className="swipePage">
           {renderComponent()}
