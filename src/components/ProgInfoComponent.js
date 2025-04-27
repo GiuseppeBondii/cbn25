@@ -96,7 +96,7 @@ END:VCALENDAR`
   // Funzione per condividere l'evento tramite la Web Share API (o fallback copiando il testo)
   const shareEvent = () => {
     const shareData = {
-      title: event.title, text: `*${event.title}+ \n ${event.description}\nData: ${event.date}\nOra: ${event.time}\nLuogo: ${event.location}`,
+      title: event.title, text: `*${event.title}* \n ${event.description}\nData: ${event.date}\nOra: ${event.time}\nLuogo: ${event.location}`,
       url: window.location.href //Link al sito
     };
 
