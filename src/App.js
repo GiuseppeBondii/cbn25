@@ -1,78 +1,79 @@
-import React, { useState /*, useRef*/ } from 'react';
+import React, { useState, useEffect } from 'react';
+import { Routes, Route, useLocation, useNavigate } from 'react-router-dom';
 import BottomBar from './components/BottomBar';
 import HomeComponent from './components/HomeComponent';
 import ProgInfoComponent from './components/ProgInfoComponent';
 import FoodComponent from './components/FoodComponent';
 import ImagesAlongYearsComponent from './components/ImagesAlongYearsComponent';
+import Lotteria from './components/ComponenteLotteria';
 import Footer from './components/Footer';
 import "./components/swipe.css";
-import Lotteria from './components/ComponenteLotteria';
 
-
-// Il codice di preloading è stato rimosso in favore del caricamento progressivo con blur
 function App() {
+  const location = useLocation();
+  const navigate = useNavigate();
   const [activeIndex, setActiveIndex] = useState(0);
 
-  //const touchStartX = useRef(null);
-  //const touchEndX = useRef(null);
-  //const MIN_SWIPE_DISTANCE = 50; // Distanza minima per riconoscere lo swipe
-
-  /*
-  const handleTouchStart = (e) => {
-    touchStartX.current = e.touches[0].clientX;
-  };
-
-  const handleTouchMove = (e) => {
-    touchEndX.current = e.touches[0].clientX;
-  };
-
-  const handleTouchEnd = () => {
-    if (!touchStartX.current || !touchEndX.current) return;
-
-    const distance = touchStartX.current - touchEndX.current;
-    const isLeftSwipe = distance > MIN_SWIPE_DISTANCE;
-    const isRightSwipe = distance < -MIN_SWIPE_DISTANCE;
-
-    if (isLeftSwipe && activeIndex < 3) {
-      setActiveIndex(prevIndex => prevIndex + 1);
-    } else if (isRightSwipe && activeIndex > 0) {
-      setActiveIndex(prevIndex => prevIndex - 1);
-    }
-
-    touchStartX.current = null;
-    touchEndX.current = null;
-  };*/
-
-  const renderComponent = () => {
-    switch (activeIndex) {
-      case 0:
-        return <HomeComponent />;
-      case 1:
-        return <ProgInfoComponent />;
-      case 2:
-        return <FoodComponent />;
-        case 3:
-      return <Lotteria />;
-      case 4:
-        return <ImagesAlongYearsComponent />;
+  useEffect(() => {
+    switch (location.pathname) {
+      case '/':
+        setActiveIndex(0);
+        break;
+      case '/info':
+        setActiveIndex(1);
+        break;
+      case '/food':
+        setActiveIndex(2);
+        break;
+      case '/lottery':
+        setActiveIndex(3);
+        break;
+      case '/images':
+        setActiveIndex(4);
+        break;
       default:
-        return <HomeComponent />;
+        setActiveIndex(0);
+        break;
+    }
+  }, [location.pathname]);
+
+  const handleSetActiveIndex = (index) => {
+    setActiveIndex(index);
+    switch (index) {
+      case 0:
+        navigate('/');
+        break;
+      case 1:
+        navigate('/info');
+        break;
+      case 2:
+        navigate('/food');
+        break;
+      case 3:
+        navigate('/lottery');
+        break;
+      case 4:
+        navigate('/images');
+        break;
+      default:
+        navigate('/');
+        break;
     }
   };
 
   return (
     <div>
-      <div 
-        className="appContainer" 
-        //onTouchStart={handleTouchStart}
-        //onTouchMove={handleTouchMove}
-        //onTouchEnd={handleTouchEnd}
-      >
+      <div className="appContainer">
         <div className="swipePage">
-          {renderComponent()}
+          <Routes>
+            <Route path="/" element={<HomeComponent />} />
+            <Route path="/info" element={<ProgInfoComponent />} />
+            <Route path="/food" element={<FoodComponent />} />
+            <Route path="/lottery" element={<Lotteria />} />
+            <Route path="/images" element={<ImagesAlongYearsComponent />} />
+          </Routes>
         </div>
-
-        <BottomBar activeIndex={activeIndex} setActiveIndex={setActiveIndex} />
+        <BottomBar activeIndex={activeIndex} setActiveIndex={handleSetActiveIndex} />
       </div>
       <Footer />
     </div>

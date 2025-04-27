@@ -7,19 +7,28 @@
           "id": "piadina-la-soda",
           "name": "La Soda",
           "description": "Crudo, Rucola, Stracchino",
-          "price": 4.0
+          "price": 4.0,
+          "available_on": "8 Maggio"
         },
         {
           "id": "piadina-la-sally",
           "name": "La Sally",
           "description": "Salsiccia, Peperoni e cipolle caramellate, Stracchino",
-          "price": 4.0
+          "price": 4.0,
+          "available_on": "8 Maggio"
         },
         {
           "id": "piadina-la-magis",
           "name": "La Magis",
           "description": "Pomodoro, Mozzarella, Iceberg, Maionese",
-          "price": 4.0
+          "price": 4.0,
+          "available_on": "8 Maggio"
+        },
+        {
+          "id": "extra-patate-piada",
+          "name": "Aggiunta patate alla piada",
+          "description": null,
+          "price": 1.5
         }
       ]
     },
@@ -30,13 +39,15 @@
           "id": "panino-quello-giusto",
           "name": "Quello Giusto",
           "description": "Patty di carne, Cheddar, Bacon, Salsa CBibbiN, Iceberg",
-          "price": 4.5
+          "price": 4.5,
+          "available_on": "9-10 Maggio"
         },
         {
           "id": "panino-lo-huge",
           "name": "Lo Huge",
           "description": "Zucchine grigliate, Melanzane grigliate, Cipolle caramellate, Scamorza",
-          "price": 4.5
+          "price": 4.5,
+          "available_on": "9-10 Maggio"
         },
         {
           "id": "extra-patate-panino",
@@ -54,14 +65,14 @@
           "name": "El Pepo",
           "description": "Patty di carne, Salsa Chili, Cheddar",
           "price": 4.5,
-          "available_on": "10 Maggio"
+          "available_on": "9 Maggio"
         },
         {
           "id": "panino-el-criminal",
           "name": "El Criminal",
           "description": "Costine, Valeriana, Finocchio, Salsa Ross",
           "price": 4.5,
-          "available_on": "11 Maggio"
+          "available_on": "10 Maggio"
         }
       ]
     },
@@ -192,9 +203,10 @@
         },
         {
           "id": "bevanda-gin-tonic",
-          "name": "Gin Tonic (solo sabato sera)",
+          "name": "Gin Tonic",
           "description": null,
-          "price": 5.0
+          "price": 5.0,
+          "available_on": "10 Maggio"
         }
       ]
     },
@@ -214,8 +226,8 @@
       "items": [
         {
           "id": "dolce-cannolo-siculo",
-          "name": "Cannolo Siculo del Bar Alcamo con ricotta e canditi",
-          "description": null,
+          "name": "Cannolo Siculo del Bar Alcamo",
+          "description": "con ricotta e canditi",
           "price": 3.0
         }
       ]

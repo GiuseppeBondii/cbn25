@@ -3,16 +3,15 @@ import { FiHome, FiCalendar, FiFolder } from 'react-icons/fi';
 import { IoFastFoodOutline } from "react-icons/io5";
 import { TbListNumbers } from "react-icons/tb";
 
-
 import './bottombar.css';
 
 const BottomBar = ({ activeIndex, setActiveIndex }) => {
   const items = [
-    { icon: <FiHome size={24} /> },
-    { icon: <FiCalendar size={24} /> },
-    {  icon: <IoFastFoodOutline size={24} /> },
-    { icon: <TbListNumbers size={24} />},
-    {  icon: <FiFolder size={24} /> }
+    { icon: <FiHome size={24} /> /*, label: 'Home' */},
+    { icon: <FiCalendar size={24} /> /*, label: 'Info' */},
+    { icon: <IoFastFoodOutline size={24} /> /*, label: 'Food'*/ },
+    { icon: <TbListNumbers size={24} /> /*, label: 'Lotteria' */},
+    { icon: <FiFolder size={24} />/*, label: 'Immagini'*/ }
   ];
 
   return (
@@ -25,7 +24,7 @@ const BottomBar = ({ activeIndex, setActiveIndex }) => {
             onClick={() => setActiveIndex(index)}
           >
             {item.icon}
-            <span className="label">{item.label}</span>
+            {/*<span className="label">{item.label}</span>*/}
           </button>
         ))}
         <div

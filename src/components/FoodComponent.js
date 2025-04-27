@@ -129,7 +129,7 @@ const FoodComponent = () => {
                   style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}
                 >
                   <span>
-                    {item.name} x{item.quantity} – €{(item.price * item.quantity).toFixed(2)}
+                    {item.name} – €{(item.price * item.quantity).toFixed(2)}
                   </span>
                   <div className="quantity-control">
                     <button onClick={() => changeQuantity(item, -1)}>–</button>
