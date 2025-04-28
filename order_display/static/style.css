@@ -1,0 +1,169 @@
+:root {
+    --cbn-blue: #103682;
+    --cbn-orange: #ef7f1b;
+    --font-title: 'Craketest Medium', sans-serif;
+    --font-body: 'Clash Grotesk', sans-serif;
+}
+
+/* Reset base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: #fff;
+    color: #333;
+    padding: 2rem;
+    text-align: center;
+}
+
+/* Titoli */
+h1 {
+    font-family: var(--font-title);
+    font-size: 2.5rem;
+    color: var(--cbn-blue);
+    margin-bottom: 1rem;
+}
+
+h2 {
+    font-family: var(--font-title);
+    font-size: 2rem;
+    color: var(--cbn-orange);
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+/* Form principale */
+form {
+    margin: 1rem auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+/* Input testo */
+input[type="text"] {
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 2px solid var(--cbn-blue);
+    border-radius: 8px;
+    width: 250px;
+}
+
+/* Bottoni */
+button {
+    background-color: var(--cbn-orange);
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--cbn-blue);
+}
+
+/* Lista ordini */
+ul {
+    list-style: none;
+    margin-top: 1rem;
+    padding: 0;
+}
+
+li {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    margin: 0.5rem auto;
+    padding: 0.75rem;
+    border-radius: 8px;
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Form inline per il bottone rimuovi */
+li form {
+    margin: 0;
+}
+
+/* Bottone rimuovi piccolo */
+li button {
+    padding: 0.3rem 0.7rem;
+    font-size: 0.9rem;
+}
+
+/* Stile per la pagina di display degli ordini */
+
+/* Corpo pagina */
+body {
+    font-family: var(--font-title);
+    background-color: #fff;
+    color: var(--cbn-blue);
+    text-align: center;
+    padding: 2rem;
+}
+
+/* Titolo principale */
+h1 {
+    font-size: 4rem;
+    color: var(--cbn-orange);
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Contenitore ordini */
+.order-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+/* Ogni ordine */
+.order-item {
+    background-color: var(--cbn-blue);
+    color: #fff;
+    font-size: 6rem;
+    padding: 2rem 3rem;
+    border-radius: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    min-width: 200px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+/* Effetto hover delicato */
+.order-item:hover {
+    transform: scale(1.05);
+    background-color: var(--cbn-orange);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 3rem;
+    }
+    .order-item {
+        font-size: 4rem;
+        min-width: 150px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+    .order-item {
+        font-size: 3rem;
+        min-width: 120px;
+    }
+}

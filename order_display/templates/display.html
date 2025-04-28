@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ordini Pronti</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <meta http-equiv="refresh" content="5">
+    <style>
+        body { font-size: 3em; text-align: center; margin-top: 50px; }
+    </style>
+</head>
+<body>
+    <h1>Ordini Pronti</h1>
+    <div class="order-list">
+        {% for order in orders %}
+            <div class="order-item">{{ order }}</div>
+        {% endfor %}
+    </div>
+</body>
+</html>
