@@ -23,6 +23,17 @@ const HomeComponent = () => {
           <p>{data.widgetText}</p>
         </div>
 
+        {
+          //Ghigo dovevi aggiungere anche il widget container
+        }
+
+      </div>
+      <div className="widget-container">
+        <div className="widget">
+          <h2>{data.manifestTitle}</h2>
+          <p>{data.manifestText}</p>
+        </div>
+
       </div>
     </div>
   );
