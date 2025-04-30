@@ -22,11 +22,13 @@ const HomeComponent = () => {
           <h2>{data.widgetTitle}</h2>
           <p>{data.widgetText}</p>
         </div>
-        <br />
+/*
+      <br />
         <div className="widget">
           <h2>{data.manifestTitle}</h2>
           <p>{data.manifestText}</p>
         </div>
+*/
       </div>
     </div>
   );
