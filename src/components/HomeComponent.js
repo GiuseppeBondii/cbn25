@@ -31,7 +31,9 @@ const HomeComponent = () => {
       <div className="widget-container">
         <div className="widget">
           <h2>{data.manifestTitle}</h2>
-          <p>{data.manifestText}</p>
+          {data.manifestText.split('\n\n').map((paragraph, idx) => (
+            <p key={idx}>{paragraph}</p>
+          ))}
         </div>
 
       </div>
