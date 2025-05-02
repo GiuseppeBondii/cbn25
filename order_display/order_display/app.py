@@ -3,17 +3,17 @@ from flask import Flask, render_template, request, redirect
 app = Flask(__name__)
 # per aggiungere dei colori, si aggiunge qui
 orders =  {
-    'red': [],
+    'white': [],
     'blue': [],
     'green': []
 }
 # per aggiungere dei colori, si aggiunge qui
-orders['red'] = [i for i in range(1, 101)]
+orders['white'] = [i for i in range(1, 101)]
 orders['blue'] = [i for i in range(1, 101)]
 orders['green'] = [i for i in range(1, 101)]
 ready = {
 # per aggiungere dei colori, si aggiunge qui
-    'red': [],
+    'white': [],
     'blue': [1],
     'green': []
 }
