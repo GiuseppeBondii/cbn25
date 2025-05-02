@@ -5,6 +5,10 @@ orders = []
 pwd = 'SucaZizza'
 authToken = 0
 
+@app.route('/check_orders')
+def check_orders():
+    return {'orders': orders}
+
 @app.route('/')
 def index():
     return render_template('display.html', orders=orders)

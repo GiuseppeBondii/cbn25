@@ -3,7 +3,6 @@
 <head>
     <title>Ordini Pronti</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-    <meta http-equiv="refresh" content="5">
     <style>
         body { font-size: 3em; text-align: center; margin-top: 50px; }
     </style>
@@ -16,4 +15,36 @@
         {% endfor %}
     </div>
 </body>
+<script>
+    //q: I want to send ajax requests to the server every 5 seconds to check for new orders.
+    //a: You can use the setInterval function to send an AJAX request every 5 seconds.
+    // This example uses the Fetch API to send a GET request to the server.
+    // You can replace '/check_orders' with the actual endpoint you want to call.
+    setInterval(function() {
+        //q: how to establish a connection to a websocket server?
+        
+
+
+        fetch('/check_orders')
+            .then(response => response.json())
+            .then(data => {
+                // Handle the response data here
+                console.log(data);
+                //q: How to update the order list on the page?
+                //a: You can update the order list in the DOM using JavaScript.
+                // For example, you can clear the current list and append new items:
+                const orderList = document.querySelector('.order-list');
+                orderList.innerHTML = ''; // Clear the current list
+                data.orders.forEach(order => {
+                    const orderItem = document.createElement('div');
+                    orderItem.className = 'order-item';
+                    orderItem.textContent = order;
+                    orderList.appendChild(orderItem);
+                });
+                // This will replace the current order list with the new ones
+                // You can update the order list on the page if needed
+            })
+            .catch(error => console.error('Error:', error));
+    }, 5000);
+</script>
 </html>
