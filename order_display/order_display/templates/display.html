@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ordini Pronti</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        body { font-size: 3em; text-align: center; margin-top: 50px; }
+    </style>
+</head>
+<body>
+    <h1>Ordini Pronti</h1>
+    <div class="order-list">
+    </div>
+</body>
+<script>
+    setInterval(function() {
+        fetch('/check_orders')
+            .then(response => response.json())
+            .then(data => {
+                // Handle the response data here
+                const orderList = document.querySelector('.order-list');
+                orderList.innerHTML = ''; // Clear the current list
+                Object.keys(data.ready).forEach(color => {
+                    // For each color, iterate over the orders
+                    data.ready[color].forEach(order => {
+                        const orderItem = document.createElement('div');
+                        orderItem.className = 'order-item';
+                        orderItem.textContent = order;
+                        orderItem.style.color = "white"; // Set the text color to white
+                        orderItem.style.backgroundColor = color; // Set the color based on the order
+                        orderList.appendChild(orderItem);
+                    });
+                });
+                // This will replace the current order list with the new ones
+                // You can update the order list on the page if needed
+            })
+            .catch(error => console.error('Error:', error));
+    }, 5000);
+</script>
+</html>

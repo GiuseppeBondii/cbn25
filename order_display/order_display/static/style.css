@@ -147,6 +147,14 @@ h1 {
     background-color: var(--cbn-orange);
 }
 
+.admin-list{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
     h1 {

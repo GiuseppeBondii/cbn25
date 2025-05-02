@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Ordini</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Gestione Ordini</h1>
+    
+    <form method="POST">
+        <input type="number" name="order_number" placeholder="Numero ordine" required>
+        <input type="checkbox" name="force" value="true"> Forza
+        <select name="color" required>
+            <option value="red">Rosso</option>
+            <option value="blue">Blu</option>
+            <option value="green">Verde</option>
+        </select>
+        <button type="submit" name="add">Aggiungi</button>
+    </form>
+    
+    <h2>Ordini Attuali</h2>
+    <div class="admin-list">
+        {% for readyC in ready %}
+            <ul>
+                {% if readyC == "red" %}
+                    <li style="color: red;">{{ readyC }}</li>
+                {% elif readyC == "blue" %}
+                    <li style="color: blue;">{{ readyC }}</li>
+                {% elif readyC == "green" %}
+                    <li style="color: green;">{{ readyC }}</li>
+                {% endif %}
+                {% for order in ready[readyC] %}
+                    <li>
+                        {{ order }}
+                        <form method="POST" style="display:inline;">
+                            <input type="hidden" name="order_number" value="{{ order }}">
+                            <input type="hidden" name="color" value="{{ readyC }}">
+                            <button class="Button{{ readyC }}" type="submit" name="remove">Rimuovi</button>
+                        </form>
+                    </li>
+                {% endfor %}
+            </ul>    
+        {% endfor %}
+    </div>
+</body>
+</html>
