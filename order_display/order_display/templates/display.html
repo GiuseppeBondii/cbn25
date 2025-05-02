@@ -27,6 +27,9 @@
                         orderItem.className = 'order-item';
                         orderItem.textContent = order;
                         orderItem.style.color = "white"; // Set the text color to white
+                        if(color === "white"){
+                            orderItem.style.color = "black"; // Set the text color to black for white background
+                        }
                         orderItem.style.backgroundColor = color; // Set the color based on the order
                         orderList.appendChild(orderItem);
                     });

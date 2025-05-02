@@ -11,6 +11,7 @@
         <input type="number" name="order_number" placeholder="Numero ordine" required>
         <input type="checkbox" name="force" value="true"> Forza
         <select name="color" required>
+            <!-- per aggiungere dei colori, si aggiunge qui -->
             <option value="red">Rosso</option>
             <option value="blue">Blu</option>
             <option value="green">Verde</option>
@@ -22,13 +23,7 @@
     <div class="admin-list">
         {% for readyC in ready %}
             <ul>
-                {% if readyC == "red" %}
-                    <li style="color: red;">{{ readyC }}</li>
-                {% elif readyC == "blue" %}
-                    <li style="color: blue;">{{ readyC }}</li>
-                {% elif readyC == "green" %}
-                    <li style="color: green;">{{ readyC }}</li>
-                {% endif %}
+                <li style="color: {{ readyC }};">{{ readyC }}</li>
                 {% for order in ready[readyC] %}
                     <li>
                         {{ order }}
