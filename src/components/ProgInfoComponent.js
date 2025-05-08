@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import programData from './Programma.json';
 import './ProgInfoComponent.css';
+import MyMap from '../files/assets/mappa_2025.png';
+
 //import ProgressiveImage from './ProgressiveImage';
 
 const Modal = ({ event, onClose }) => {
@@ -183,6 +185,13 @@ const ProgInfoComponent = () => {
 
   return (
     <div className="home-container">
+
+<div>
+     <header className="home-header">
+        <h1 className="title">Mappa</h1>
+      </header>
+      <img src={MyMap} alt='Mappa CBN' ></img>
+   </div>
 
 
 <header className="home-header">
