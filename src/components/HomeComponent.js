@@ -1,6 +1,6 @@
 import React from 'react';
 import './HomeComponent.css';
-import CountdownComponent from "./CountDownComponent";
+//import CountdownComponent from "./CountDownComponent";
 import imgBck from '../files/CBN_Cover.jpg';
 import data from "./HomeComponent.json"
 
@@ -16,7 +16,7 @@ const HomeComponent = () => {
       <div className="bckHOME">
         <img src={imgBck} alt="Copertina" className="immagineHome" />
       </div>
-      <CountdownComponent />
+      {/*<CountdownComponent />*/}
       <div className="widget-container">
         <div className="widget">
           <h2>{data.widgetTitle}</h2>

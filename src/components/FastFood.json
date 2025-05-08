@@ -63,7 +63,7 @@
         {
           "id": "panino-el-pepo",
           "name": "El Pepo",
-          "description": "Patty di carne, Salsa Chili, Cheddar",
+          "description": "Patty di carne, Salsa Chili, Cheddar, Maionese",
           "price": 4.5,
           "available_on": "9 Maggio"
         },
@@ -135,19 +135,24 @@
           "id": "birra-ichnusa",
           "name": "Ichnusa non filtrata",
           "description": null,
-          "price": 3.5
+          "price": 4
         },
         {
           "id": "birra-ducato-machete",
           "name": "Ducato Machete (IPA)",
           "description": null,
-          "price": 4.0
+          "price": 4.5
         },
         {
           "id": "birra-erdinger-helles",
           "name": "Erdinger Brauhaus Helles (Lager)",
           "description": null,
-          "price": 3.5
+          "price": 4
+        },{
+          "id": "birra-hirter-kellermeiste",
+          "name": "Hirter Kellermeiste",
+          "description": null,
+          "price": 4
         }
       ]
     },

@@ -28,12 +28,6 @@
         "date": "9 Maggio",
         "events": [
           {
-            "title": "Intelligenza artificiale: strumento o limite per l'uomo?",
-            "description": "con Paolo Benanti, professore alla Pontificia Università Gregoriana e presso l'Università di Seattle, consigliere del Vaticano, membro del Comitato sull'intelligenza artificiale delle Nazioni Unite, e Fabio Mercorio, professore all'Università degli studi di Milano - Bicocca, director del master in Al e Data Analytics.",
-            "time": "18:00",
-            "location": "Piazza San Domenico"
-          },
-          {
             "title": "Dove si accende la vita?",
             "description": "dialogo sulla sofferenza psicologica con Lorenzo Bassani, neuropsichiatra e responsabile della struttura semplice di psichiatria e psicoterapia dell'età evolutiva dell'Ospedale F. Tappeiner di Merano, e Gianluca Guida, direttore dell'Istituto Penale per Minorenni di Nisida (Napoli), Centro Europeo di Studi sulla devianza ed il disagio giovanile.",
             "time": "21:00",
@@ -44,6 +38,12 @@
       {
         "date": "10 Maggio",
         "events": [
+          {
+            "title": "Intelligenza artificiale: strumento o limite per l'uomo?",
+            "description": "con Paolo Benanti, professore alla Pontificia Università Gregoriana e presso l'Università di Seattle, consigliere del Vaticano, membro del Comitato sull'intelligenza artificiale delle Nazioni Unite, e Fabio Mercorio, professore all'Università degli studi di Milano - Bicocca, director del master in Al e Data Analytics.",
+            "time": "16:00",
+            "location": "Piazza San Domenico"
+          },
           {
             "title": "Politica per la vita, vita per la politica",
             "description": "con Gabriele Toccafondi, dirigente di cooperativa, politico italiano, deputato alla Camera nella XVI legislatura.",

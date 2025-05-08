@@ -7,6 +7,7 @@ import FoodComponent from './components/FoodComponent';
 import ImagesAlongYearsComponent from './components/ImagesAlongYearsComponent';
 import Lotteria from './components/ComponenteLotteria';
 import Footer from './components/Footer';
+import MapComponent from './components/MapComponent';
 import "./components/swipe.css";
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
   const [activeIndex, setActiveIndex] = useState(0);
 
   useEffect(() => {
+    // Aggiorna l'indice attivo in base al percorso
     switch (location.pathname) {
       case '/':
         setActiveIndex(0);
@@ -22,19 +24,23 @@ function App() {
       case '/info':
         setActiveIndex(1);
         break;
-      case '/food':
+      case '/map':
         setActiveIndex(2);
         break;
-      case '/lottery':
+      case '/food':
         setActiveIndex(3);
         break;
-      case '/images':
+      case '/lottery':
         setActiveIndex(4);
+        break;
+      case '/images':
+        setActiveIndex(5);
         break;
       default:
         setActiveIndex(0);
-        break;
     }
+    // Torna in cima alla pagina ad ogni cambio di rotta
+    window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
   }, [location.pathname]);
 
   const handleSetActiveIndex = (index) => {
@@ -47,18 +53,22 @@ function App() {
         navigate('/info');
         break;
       case 2:
-        navigate('/food');
+        navigate('/map');
         break;
       case 3:
-        navigate('/lottery');
+        navigate('/food');
         break;
       case 4:
+        navigate('/lottery');
+        break;
+      case 5:
         navigate('/images');
         break;
       default:
         navigate('/');
-        break;
     }
+    // (opzionale) scroll animato quando si clicca il pulsante
+    // window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
   };
 
   return (
@@ -68,6 +78,7 @@ function App() {
           <Routes>
             <Route path="/" element={<HomeComponent />} />
             <Route path="/info" element={<ProgInfoComponent />} />
+            <Route path="/map" element={<MapComponent />} />
             <Route path="/food" element={<FoodComponent />} />
             <Route path="/lottery" element={<Lotteria />} />
             <Route path="/images" element={<ImagesAlongYearsComponent />} />
