@@ -151,3 +151,27 @@
   font-style: normal;
   font-display: swap;
 }
+
+.footer-sponsor {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+
+.footer-sponsor .footer-text p:first-child {
+  color: var(--cbn-blue);
+  font-family: var(--font-title);
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 2rem;
+}
+
+.footer-sponsor-logos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
