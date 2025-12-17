@@ -47,7 +47,7 @@ const Footer = () => {
       <div className="footer-content">
         
         <div className="footer-text">
-          <p>Sponsor</p>
+          <p>2025's Sponsor</p>
         </div>
         
         <div className="footer-logo-container">

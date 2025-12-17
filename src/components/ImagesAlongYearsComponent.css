@@ -192,3 +192,132 @@
     padding: 6px;
   }
 }
+
+
+.cbn-carousel-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.95);
+  z-index: 99999; /* Molto alto per stare sopra a tutto */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(5px);
+}
+
+.cbn-carousel-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 90%;
+  max-height: 90%;
+}
+
+.cbn-main-image-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cbn-carousel-image {
+  max-width: 100%;
+  max-height: 80vh;
+  object-fit: contain;
+  border-radius: 4px;
+  box-shadow: 0 0 30px rgba(0,0,0,0.5);
+}
+
+/* Bottoni di Navigazione Laterali */
+.cbn-nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  color: white;
+  padding: 20px 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 100;
+  border-radius: 5px;
+}
+
+.cbn-nav-btn:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.cbn-prev { left: 20px; }
+.cbn-next { right: 20px; }
+
+/* Bottone Chiudi */
+.cbn-close-btn {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.3s;
+  z-index: 101;
+}
+
+.cbn-close-btn:hover {
+  opacity: 1;
+}
+
+/* Bottone Download interno all'immagine */
+.cbn-download-btn {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  border: 1px solid rgba(255,255,255,0.3);
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.cbn-download-btn:hover {
+  background: #007bff; /* Colore brand o blu standard */
+}
+
+.cbn-image-caption {
+  color: white;
+  margin-top: 20px;
+  font-family: sans-serif;
+  font-size: 1.1rem;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .cbn-nav-btn {
+    padding: 10px 5px;
+    background: rgba(0,0,0,0.3);
+  }
+  
+  .cbn-prev { left: 5px; }
+  .cbn-next { right: 5px; }
+
+  .cbn-close-btn {
+    top: 15px;
+    right: 15px;
+  }
+
+  .cbn-carousel-image {
+    max-height: 65vh;
+  }
+}

@@ -107,50 +107,56 @@ const ImagesAlongYearsComponent = () => {
         ))}
       </div>
 
+      // ... (resto del codice invariato fino al return)
+
       {isCarouselOpen && (
-        <div className="carousel-overlay">
-          <div className="carousel-container">
-            <button 
-              className="close-btn"
-              onClick={() => setIsCarouselOpen(false)}
-            >
-              <FiX size={24} />
-            </button>
+        <div className="cbn-carousel-overlay">
+          {/* Bottone Chiudi - Posizionato in alto a destra fisso */}
+          <button 
+            className="cbn-close-btn"
+            onClick={() => setIsCarouselOpen(false)}
+            aria-label="Chiudi"
+          >
+            <FiX size={32} />
+          </button>
 
-            <div className="carousel-content">
+          {/* Navigazione Sinistra */}
+          <button 
+            className="cbn-nav-btn cbn-prev"
+            onClick={() => handleNavigation('prev')}
+          >
+            <FiChevronLeft size={48} />
+          </button>
+
+          <div className="cbn-carousel-container">
+            <div className="cbn-main-image-wrapper">
+              <ProgressiveImage 
+                src={images[selectedImageIndex].url && images[selectedImageIndex].url.default ? images[selectedImageIndex].url.default : images[selectedImageIndex].url}
+                alt={images[selectedImageIndex].caption}
+                className="cbn-carousel-image"
+              />
+              
               <button 
-                className="nav-btn prev"
-                onClick={() => handleNavigation('prev')}
+                className="cbn-download-btn"
+                onClick={handleDownload}
+                title="Scarica immagine"
               >
-                <FiChevronLeft size={32} />
-              </button>
-
-              <div className="main-image">
-                <ProgressiveImage 
-                  src={images[selectedImageIndex].url && images[selectedImageIndex].url.default ? images[selectedImageIndex].url.default : images[selectedImageIndex].url}
-                  alt={images[selectedImageIndex].caption}
-                  className="carousel-image"
-                />
-                <p className="image-caption">
-                  {images[selectedImageIndex].caption}
-                </p>
-                <button 
-                  className="download-btn"
-                  onClick={handleDownload}
-                  title="Scarica immagine"
-                >
-                  <FiDownload size={20} />
-                </button>
-              </div>
-
-              <button 
-                className="nav-btn next"
-                onClick={() => handleNavigation('next')}
-              >
-                <FiChevronRight size={32} />
+                <FiDownload size={22} />
               </button>
             </div>
+            
+            <p className="cbn-image-caption">
+              {images[selectedImageIndex].caption}
+            </p>
           </div>
+
+          {/* Navigazione Destra */}
+          <button 
+            className="cbn-nav-btn cbn-next"
+            onClick={() => handleNavigation('next')}
+          >
+            <FiChevronRight size={48} />
+          </button>
         </div>
       )}
     </div>

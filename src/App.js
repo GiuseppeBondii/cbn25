@@ -19,8 +19,8 @@ function App() {
     switch (location.pathname) {
       case '/':
         setActiveIndex(0);
-        break;
-      case '/info':
+        break; //TODO: quando sarà da modificare il numero di pagine bisogna guardare qui
+      /*case '/info':
         setActiveIndex(1);
         break;
       case '/food':
@@ -28,9 +28,9 @@ function App() {
         break;
       case '/lottery':
         setActiveIndex(3);
-        break;
+        break;*/
       case '/images':
-        setActiveIndex(4);
+        setActiveIndex(/*4*/1);
         break;
       default:
         setActiveIndex(0);
@@ -46,7 +46,7 @@ function App() {
         navigate('/');
         break;
       case 1:
-        navigate('/info');
+        /*navigate('/info');*/ navigate('/images'); //TODO: quando sarà da modificare il numero di pagine bisogna guardare qui
         break;
       case 2:
         navigate('/food');
