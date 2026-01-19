@@ -107,8 +107,6 @@ const ImagesAlongYearsComponent = () => {
         ))}
       </div>
 
-      // ... (resto del codice invariato fino al return)
-
       {isCarouselOpen && (
         <div className="cbn-carousel-overlay">
           {/* Bottone Chiudi - Posizionato in alto a destra fisso */}

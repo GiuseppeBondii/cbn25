@@ -15,12 +15,12 @@ function App() {
   const [activeIndex, setActiveIndex] = useState(0);
 
   useEffect(() => {
-    // Aggiorna l'indice attivo in base al percorso
+    // Aggiorna l'indice attivo in base al percorso URL
     switch (location.pathname) {
       case '/':
         setActiveIndex(0);
-        break; //TODO: quando sarà da modificare il numero di pagine bisogna guardare qui
-      /*case '/info':
+        break;
+      case '/info':
         setActiveIndex(1);
         break;
       case '/food':
@@ -28,9 +28,9 @@ function App() {
         break;
       case '/lottery':
         setActiveIndex(3);
-        break;*/
+        break;
       case '/images':
-        setActiveIndex(/*4*/1);
+        setActiveIndex(4);
         break;
       default:
         setActiveIndex(0);
@@ -41,12 +41,13 @@ function App() {
 
   const handleSetActiveIndex = (index) => {
     setActiveIndex(index);
+    // Naviga verso l'URL corrispondente quando si clicca sulla BottomBar
     switch (index) {
       case 0:
         navigate('/');
         break;
       case 1:
-        /*navigate('/info');*/ navigate('/images'); //TODO: quando sarà da modificare il numero di pagine bisogna guardare qui
+        navigate('/info');
         break;
       case 2:
         navigate('/food');
@@ -60,8 +61,6 @@ function App() {
       default:
         navigate('/');
     }
-    // (opzionale) scroll animato quando si clicca il pulsante
-    // window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
   };
 
   return (
