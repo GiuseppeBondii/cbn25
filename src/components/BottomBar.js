@@ -7,11 +7,11 @@ import './bottombar.css';
 
 const BottomBar = ({ activeIndex, setActiveIndex }) => {
   const items = [
-    { icon: <FiHome size={24} />, disabled: false },
+    { icon: <FiHome size={24} />, disabled: false },           // Home
     { icon: <FiCalendar size={24} />, disabled: true },        // Info
     { icon: <IoFastFoodOutline size={24} />, disabled: true }, // Food
     { icon: <TbListNumbers size={24} />, disabled: true },     // Lotteria
-    { icon: <FiFolder size={24} />, disabled: false }
+    { icon: <FiFolder size={24} />, disabled: false }          // Images
   ];
 
   const handleNavigation = (index, isDisabled) => {
@@ -23,7 +23,7 @@ const BottomBar = ({ activeIndex, setActiveIndex }) => {
           background: '#103682',
           color: '#fff',
         },
-        position: 'bottom-right', // O 'bottom-center' se preferisci
+        position: 'bottom-right', // O 'top-center'
       });
     } else {
       // Altrimenti cambiamo pagina
