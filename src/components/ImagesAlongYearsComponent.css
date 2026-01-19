@@ -1,13 +1,20 @@
-/* ImagesAlongYearsComponent.css */
 
 .home-container {
   padding: 20px;
   max-width: 1200px;
   margin: 0 auto;
+  padding-bottom: 80px; /* Spazio per la bottombar */
 }
 
 .widget-container {
   margin-top: 40px;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 1rem;
+  font-family: 'Arial', sans-serif;
+  color: #333;
 }
 
 .image-grid {
@@ -23,204 +30,75 @@
   border-radius: 8px;
   overflow: hidden;
   transition: transform 0.3s ease;
-  aspect-ratio: 1;
+  aspect-ratio: 1; 
+  background-color: #eee;
 }
 
 .grid-item:hover {
   transform: scale(1.03);
+  z-index: 2;
 }
 
-.grid-item img {
+.grid-item img, .grid-image {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  display: block;
 }
 
-.image-overlay {
+.image-overlay, .image-overlay-preview {
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
-  background: linear-gradient(transparent, rgba(0,0,0,0.7));
+  background: linear-gradient(transparent, rgba(0,0,0,0.8));
   padding: 15px;
   color: white;
   opacity: 0;
   transition: opacity 0.3s ease;
 }
 
-.grid-item:hover .image-overlay {
+.grid-item:hover .image-overlay,
+.grid-item:hover .image-overlay-preview {
   opacity: 1;
 }
 
-/* Carosello Stili */
-.carousel-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.9);
-  z-index: 10000;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.carousel-container {
-  position: relative;
-  width: 98vw;
-  max-width: 800px;
-  padding: 20px;
-}
-
-.close-btn {
-  position: absolute;
-  top: -10px;
-  right: -80px;
-  background: none;
-  border: none;
-  color: white;
-  cursor: pointer;
-}
-
-.carousel-content {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.main-image {
-  flex-grow: 1;
-  text-align: center;
-  position: relative;
-}
-
-.main-image img {
-  max-width: 75vw;
-  max-height: 70vh;
-  border-radius: 8px;
-  object-fit: contain;
-}
-
-.image-caption {
-  color: white;
-  margin-top: 15px;
-  font-size: 1.2rem;
-}
-
-.nav-btn {
-  background: none;
-  border: none;
-  color: white;
-  cursor: pointer;
-  padding: 15px;
-  transition: opacity 0.3s ease;
-}
-
-.nav-btn:hover {
-  opacity: 0.7;
-}
-
-/* Nuove regole per il Download Button */
-.download-btn {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  background: rgba(0, 0, 0, 0.5);
-  color: #fefefe;
-  border: none;
-  border-radius: 50%;
-  padding: 8px;
-  cursor: pointer;
-  z-index: 1100;
-}
-
-.download-btn:hover {
-  background: rgba(0, 0, 0, 0.7);
-  transform: scale(1.1);
-}
-
-@media (max-width: 950px) {
-  .close-btn {
-    top: 10px;
-    right: 10px;
-  }
-
-}
-
-/* Media Queries per una maggiore responsività */
-@media (max-width: 768px) {
-  .image-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .carousel-content {
-    flex-direction: column;
-  }
-
-  .nav-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-
-  .nav-btn.prev {
-    left: 5px;
-  }
-
-  .nav-btn.next {
-    right: 5px;
-  }
-
-  /* Posizionamento più adatto per il bottone di chiusura */
-  .close-btn {
-    top: 10px;
-    right: 10px;
-  }
-
-  .main-image img {
-    max-height: 50vh;
-  }
-}
-
-@media (max-width: 480px) {
-  .image-caption {
-    font-size: 1rem;
-  }
-
-  .nav-btn {
-    padding: 6px;
-  }
-}
 
 
 .cbn-carousel-overlay {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
-  height: 100vh;
-  background: rgba(0, 0, 0, 0.95);
-  z-index: 99999; /* Molto alto per stare sopra a tutto */
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.95);
+  z-index: 9999;
   display: flex;
   justify-content: center;
   align-items: center;
   backdrop-filter: blur(5px);
+  overflow: hidden;
 }
 
 .cbn-carousel-container {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 90%;
-  max-height: 90%;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; 
 }
 
 .cbn-main-image-wrapper {
   position: relative;
+  pointer-events: auto;
   display: flex;
   justify-content: center;
   align-items: center;
+  max-width: 85vw; 
+  max-height: 80vh;
 }
 
 .cbn-carousel-image {
@@ -228,10 +106,21 @@
   max-height: 80vh;
   object-fit: contain;
   border-radius: 4px;
-  box-shadow: 0 0 30px rgba(0,0,0,0.5);
+  box-shadow: 0 0 20px rgba(0,0,0,0.8);
+  display: block;
 }
 
-/* Bottoni di Navigazione Laterali */
+.cbn-image-caption {
+  color: #f1f1f1;
+  margin-top: 15px;
+  font-family: sans-serif;
+  font-size: 1rem;
+  text-align: center;
+  pointer-events: auto;
+  padding: 0 10px;
+}
+
+
 .cbn-nav-btn {
   position: absolute;
   top: 50%;
@@ -239,85 +128,102 @@
   background: rgba(255, 255, 255, 0.1);
   border: none;
   color: white;
-  padding: 20px 10px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
   cursor: pointer;
-  transition: all 0.3s ease;
-  z-index: 100;
-  border-radius: 5px;
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  pointer-events: auto;
 }
 
 .cbn-nav-btn:hover {
-  background: rgba(255, 255, 255, 0.25);
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.cbn-nav-btn svg {
+  width: 30px;
+  height: 30px;
 }
 
 .cbn-prev { left: 20px; }
 .cbn-next { right: 20px; }
 
-/* Bottone Chiudi */
 .cbn-close-btn {
   position: absolute;
-  top: 30px;
-  right: 30px;
-  background: none;
+  top: 20px;
+  right: 20px;
+  background: rgba(0,0,0,0.3);
   border: none;
   color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
   cursor: pointer;
-  opacity: 0.7;
-  transition: opacity 0.3s;
-  z-index: 101;
+  z-index: 10001;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: auto;
 }
 
-.cbn-close-btn:hover {
-  opacity: 1;
-}
-
-/* Bottone Download interno all'immagine */
 .cbn-download-btn {
   position: absolute;
-  bottom: 20px;
-  right: 20px;
-  background: rgba(0, 0, 0, 0.6);
-  color: white;
-  border: 1px solid rgba(255,255,255,0.3);
+  bottom: 10px;
+  right: 10px;
+  background: rgba(255, 255, 255, 0.9);
+  color: black;
+  border: none;
   border-radius: 50%;
-  width: 45px;
-  height: 45px;
+  width: 35px;
+  height: 35px;
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  transition: background 0.3s;
+  z-index: 10;
+  pointer-events: auto;
 }
 
-.cbn-download-btn:hover {
-  background: #007bff; /* Colore brand o blu standard */
-}
-
-.cbn-image-caption {
-  color: white;
-  margin-top: 20px;
-  font-family: sans-serif;
-  font-size: 1.1rem;
-  font-weight: 300;
-  letter-spacing: 1px;
-}
-
-/* Responsive */
 @media (max-width: 768px) {
-  .cbn-nav-btn {
-    padding: 10px 5px;
-    background: rgba(0,0,0,0.3);
-  }
   
-  .cbn-prev { left: 5px; }
-  .cbn-next { right: 5px; }
+  /* Griglia originale a 2 colonne su mobile */
+  .image-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 
-  .cbn-close-btn {
-    top: 15px;
-    right: 15px;
+  /* Carosello: uso tutta la larghezza */
+  .cbn-main-image-wrapper {
+    max-width: 100%;
+    padding: 0 5px;
   }
 
   .cbn-carousel-image {
     max-height: 65vh;
+    width: auto;
+    max-width: 100%;
+  }
+
+  .cbn-nav-btn {
+    width: 40px;
+    height: 40px;
+    background: rgba(0, 0, 0, 0.3);
+  }
+
+  .cbn-nav-btn svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .cbn-prev { left: 5px; }
+  .cbn-next { right: 5px; }
+
+  .cbn-close-btn {
+    top: 10px;
+    right: 10px;
+    background: rgba(0, 0, 0, 0.5);
   }
 }
